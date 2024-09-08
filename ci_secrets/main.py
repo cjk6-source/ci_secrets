@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 def main():
 	logger.debug("Hello")	
 	with open(".ci_secrets.yml", 'r') as ymlfile:
-		cfg = yaml.load(ymlfile)
+		cfg = yaml.safe_load(ymlfile)
 	if 'log_level' in cfg.keys():
 		set_log_level(cfg['log_level'])
 	plugin_types = _get_plugins(cfg['plugins'].keys())
