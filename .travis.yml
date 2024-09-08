@@ -3,7 +3,7 @@ before_install:
 - echo -e "machine github.com\n  login $CI_USER_TOKEN" > ~/.netrc
 
 before_script:
-    - pip install cjk6-source-ci-secrets==0.0.1
+    - pip install -i https://pypi.org/simple cjk6-source-ci-secrets==0.0.1
 script:
     #If this is the first commit on a branch, use 0000000000000000000000000000000000000000 to match the behavior of GitLab CI.
     - export COMMIT_RANGE=${TRAVIS_COMMIT_RANGE:-"0000000000000000000000000000000000000000"}
