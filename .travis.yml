@@ -14,4 +14,4 @@ script:
     - echo $LAST_COMMIT
     - pwd
     - ls
-    - python ci_secrets/main.py --since $LAST_COMMIT --includesMergeCommit --log INFO --path .
+    - python ci_secrets/main.py --since $LAST_COMMIT --includesMergeCommit --log INFO --path /home/travis/build/cjk6-source/ci_secrets
