@@ -12,4 +12,6 @@ script:
     - export COMMIT_RANGE=${TRAVIS_COMMIT_RANGE:-"10"}
     - export LAST_COMMIT=${COMMIT_RANGE%%.*}
     - echo $LAST_COMMIT
+    - pwd
+    - ls
     - python ci_secrets/main.py --since $LAST_COMMIT --includesMergeCommit --log INFO --path .
