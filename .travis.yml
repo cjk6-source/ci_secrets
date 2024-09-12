@@ -15,7 +15,7 @@ script:
     - echo $LAST_COMMIT
     - pip list
     - pwd
-    - ls
+    - ls ~/.local/bin
     - which cjk6_source_ci_secret
     - which detect-secrets
     - detect-secrets scan > .secrets.baseline
