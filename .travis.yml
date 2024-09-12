@@ -20,4 +20,4 @@ script:
     - ls /home/travis/virtualenv/python3.8.13/lib/python3.8/site-packages/pip
     - which cjk6_source_ci_secrets
     - which detect-secrets
-    - cjk6_source_ci_secrets --since $LAST_COMMIT --includesMergeCommit --log INFO
+    - /home/travis/virtualenv/python3.8.13/bin/cjk6_source_ci_secrets --since $LAST_COMMIT --includesMergeCommit --log INFO
