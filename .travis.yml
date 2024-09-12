@@ -15,5 +15,6 @@ script:
     - pip list
     - pwd
     - ls
+    - which cjk6_source_ci_secrets
     - detect-secrets scan > .secrets.baseline
     #- python cjk6_source_ci_secrets --since $LAST_COMMIT --includesMergeCommit --log INFO
