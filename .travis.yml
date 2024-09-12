@@ -16,6 +16,7 @@ script:
     - pip list
     - pwd
     - ls /home/travis/virtualenv/python3.8.13/bin/
+    - ls /home/travis/virtualenv/python3.8.13/lib/python3.8/site-packages/pip
     - which cjk6_source_ci_secret
     - which detect-secrets
     - detect-secrets scan > .secrets.baseline
