@@ -25,3 +25,4 @@ script:
     - which detect-secrets
     - pip show detect-secrets
     - cjk6_source_ci_secrets --since $LAST_COMMIT --includesMergeCommit --log INFO
+
