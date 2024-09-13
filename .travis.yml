@@ -15,6 +15,7 @@ script:
     - echo $LAST_COMMIT
     - pip -V
     - pip list
+    - pip --version
     - pwd
     - ls /home/travis/virtualenv/python3.8.13/bin/
     - ls /home/travis/virtualenv/python3.8.13/lib/python3.8/site-packages/pip
