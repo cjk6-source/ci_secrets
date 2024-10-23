@@ -12,6 +12,14 @@ The detection plugins define how `ci_secrets` identifies leaked secrets. Plugins
 
 To configure which plugins to use, create a `.ci_secrets.yml` file in the root of your project. For an example, see `example.ci_secrets.yml`. If any plugins require a configuration parameter, it can be supplied as the value for the detector key.
 
+## Scanning SVN Repositories
+
+In order to run the tool on SVN repositories, you must specify the `--svn` flag in your respective CI tool integration file (i.e. `.travis.yml` or `.gitlab-ci.yml`) when running ci_secrets. An example is provided in `example.travis.yml`. You must specify the necessary `.ci_secrets.yml` and `.travis.yml` files in whatever branch you want the scan to run. I also found it helpful to have a `requirements.txt` defined since some updated dependencies can break the functionality of the tool. This can either be the trunk directory or a branch directory. For example, if you want to scan commit changes in the trunk, you should create files like:
+- {svn_repository_name}/trunk/.ci_secrets.yml
+- {svn_repository_name}/trunk/.travis.yml
+- {svn_repository_name}/trunk/requirements.txt
+
+
 ## Running in GitLab CI
 
 See `example.gitlab-ci.yml` for an example of how to configure `ci_secrets` within a GitLab CI pipeline.
